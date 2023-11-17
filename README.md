@@ -36,8 +36,8 @@ initial priority was to get a really good rotor effect for helicopters.
 Shakersynth is a basic, text-mode application with no GUI. Getting it running
 is a little bit fiddly. Sorry about that.
 
-1. Install [Python 3]<br>
-   :point_right: Be sure to select options to add Python to the `PATH` environment variable.
+1. Install [Python 3](https://www.python.org/downloads/windows/)<br>
+   → Be sure to select options to add Python to the `PATH` environment variable.
 2. Open PowerShell and run:
    ```powershell
    pip install shakersynth
@@ -83,6 +83,18 @@ Open PowerShell and run:
 pip install --upgrade shakersynth
 ```
 
-[pyo]: https://pypi.org/project/pyo/
-[Python 3]: https://www.python.org/downloads/windows/
-[Shakersynth.lua]: https://raw.githubusercontent.com/jarpy/shakersynth/main/Shakersynth.lua
+### Development
+dependencies
+```
+apt install libgtk-3-dev
+pip install pyo python-configuration[yaml] func-timeout wxpython
+```
+to use the telemetry visualizer
+```
+pip install qtgraph PyQt5
+```
+
+#### useful links and docs
+* [pyo](https://pypi.org/project/pyo/)
+* [Shakersynth.lua](https://raw.githubusercontent.com/jarpy/shakersynth/main/Shakersynth.lua)
+* some details about [export.lua](https://wiki.hoggitworld.com/view/DCS_Export_Script)
