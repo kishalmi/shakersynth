@@ -1,5 +1,9 @@
 shakersynth_test_config.yaml
 
+# hidden directories and files - except .gitignore
+.*
+!.gitignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
