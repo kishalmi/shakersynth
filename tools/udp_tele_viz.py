@@ -1,3 +1,10 @@
+"""
+telemetry visualizer for shakersynth
+-
+make sure to change the lua IP from 127. to 192. or *
+ graphing docs → https://pyqtgraph.readthedocs.io/en/latest
+"""
+
 import socket
 import yaml
 import numpy as np
@@ -22,8 +29,12 @@ def value2(telemetry):
 
 
 def value3(telemetry):
-    if 'gun_rounds' not in telemetry: return 0
-    return telemetry['gun_rounds']
+    if 'weapon_stations' not in telemetry: return 0
+    ammo = 0
+    for st in telemetry['weapon_stations']:
+        ammo += st[0]
+    return ammo
+#    return telemetry['gun_rounds']
 
 
 # setup UI
